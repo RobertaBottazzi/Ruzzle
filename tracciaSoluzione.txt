@@ -1,0 +1,41 @@
+***APPROCCIO 1***
+Per ogni parola del dizionario che so essere valida verifico che sia nella matrice e in tal caso la salvo nella soluzione
+Quindi anzichè cercare le parole sulla griglia vado direttamente a prendere tutte le parole che so essere valide e le cerco nella griglia
+***APPROCCIO 2***
+Provo tutti i possibili percorsi su Ruzzle e verifico se la parola trovata esiste nel dizionario o meno (se non esiste faccio backtracking e continuo)
+
+NOI CI FOCALIZZIAMO SULL'APPROCCIO 1
+
+-INPUT: 
+	Stringa da riconoscere
+	Contenuto della board (matrice generata da Ruzzle)
+	In che punto della board vado a cercare la parola del dizionario? Sicuramente le posizioni plausibili da esplorare sono quelle dove è contenuta la lettera iniziale della parola.
+
+-SOLUZIONE PARZIALE:
+	La parte iniziale della parola che ho già riconosciuto
+	Elenco delle posizioni in cui si trovano le lettere già riconosciute (utile per noi)
+
+-SOLUZIONE TOTALE:
+	Qui è buona la prima, appena trovo la parola tengo quella soluzione, non vado a vedere altre posizioni in cui si può trovare quella stessa parola
+	
+	Parola completamente riconosciuta
+	Elenco delle posizioni in cui si trovano le lettere già riconosciute
+
+-LIVELLO RICORSIONE:
+	Numero di caratteri già riconosciuti
+	
+-CONDIZIONI DI TERMINAZIONE:
+	-livello=lunghezza parola da trovare nella board
+	(se viene trovata la soluzione interrompo subito la ricerca)
+	
+-AVVIO DELLA RICORSIONE
+	livello=1 (perchè la prima lettera della parola me la vado a cercare manualmente nella board)
+	
+-STRUTTURE DATI CHE CI SERVONO:
+	Stringa parola; parola da riconoscere
+	int livello; il livello
+	List<Pos> percorso; posizioni corrispondenti alla sequenza di caselle
+	
+	
+	
+	
